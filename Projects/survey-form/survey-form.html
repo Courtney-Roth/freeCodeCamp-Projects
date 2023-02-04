@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Goat Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="container">
+    <h1 id="title">Goat Survey</h1>
+    <p id="description">Thank you for telling us about your experiences with goats.</p>
+    <form id="survey-form">
+      <div class="form-group">
+        <label for="name" id="name-label">Name:</label>
+        <input id="name" type="text" placeholder="First Last" class="form-control" required />
+        <label for="email" id="email-label">Email:</label>
+        <input id="email" type="email" placeholder="Email" class="form-control" required />
+        <label for="number" id="number-label">Age:</label> 
+        <input id="number" type="number" min="13" max="120" class="form-control" required placeholder="Age" />
+      </div>
+      <div class="form-group">
+        <p>How often do you interact with goats?</p>
+        <select id="dropdown" name="dropdown" class="form-control">
+            <option value="">(select one)</option>
+            <option value="1">Never</option>
+            <option value="2">Rarely</option>
+            <option value="3">Often</option>
+            <option value="4">Every day</option>
+        </select>
+      </div>
+      <div name="radio" class="form-group radio-toolbar">
+        <p>How would you rate your overall interactions with goats?</p>
+        <label for="positive">Positive<input id="positive" type="radio" name="rating" value="positive" checked /> </label>
+        <label for="negative">Negative<input id="negative" type="radio" name="rating" value="negative"/> </label>
+        <label for="neutral">Neutral<input id="neutral" type="radio" name="rating" value="neutral"/> </label>
+      </div>
+      <div class="form-group">
+        <p>What activities have you done with goats?</p>
+          <input 
+          id="playing" 
+          type="checkbox" 
+          name="activity" 
+          value="playing" checked
+          > 
+          <label for="playing">Playing</label>
+          <input 
+          id="feeding" 
+          type="checkbox" 
+          name="activity" 
+          value="feeding"
+          > 
+          <label for="feeding">Feeding</label>
+          <input 
+          id="screaming" 
+          type="checkbox" 
+          name="activity" 
+          value="screaming"
+          > 
+          <label for="screaming">Screaming</label>
+          <label for"other-activity">Other Activities:</label>
+            <textarea name="other-activity" id="other-flavor" class="input-textarea" required>List here. 
+            </textarea>
+      </div>
+      <button type="submit" id="submit" class="submit-button">Submit</button>
+    </form>
+  </body>
+</html>
